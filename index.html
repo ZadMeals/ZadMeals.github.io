@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zad Meals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, formal, elegant hospitality; few hues, fine gold detail, lots of air.
+   IDEA: the brand's bilingual printed menu booklet as a site: English serif titles with Arabic beneath, hairline gold rules, arched photo windows.
+   PICTURE: three arched windows holding their real boxes and cakes, under the ZD monogram and wordmark.
+   COLOUR and TYPE: olive dominant, cream paper ground, antique gold accent; Cormorant Garamond + Amiri display, IBM Plex Sans Arabic / Jost body.
+   LAYOUT: centered booklet pages as full-width bands; dotted price lists; live box builder; WhatsApp booking form; AR/EN switch. */
+:root{--m:url(data:image/png;base64,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);color-scheme:light dark;
+--bg:light-dark(#f8f4ea,#14170f);--paper:light-dark(#fffdf7,#1c2015);--ink:light-dark(#2a2d1d,#efe9d8);--soft:light-dark(#6b6c58,#b5b29c);
+--olive:light-dark(#4f5a2a,#b4bf84);--oliveBg:light-dark(#4f5a2a,#2a3118);--onOlive:#f5efdd;--gold:light-dark(#a8844c,#cfae74);--line:light-dark(#dfd4bb,#3a3d2c);
+--body:"IBM Plex Sans Arabic",system-ui,sans-serif}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+html[lang=en]{--body:Jost,"IBM Plex Sans Arabic",system-ui,sans-serif}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 var(--body);overflow-x:clip}
+h1,h2,h3{font-weight:700;line-height:1.12;margin:0;text-wrap:balance}
+.serif,.head h2,.card h3,.price b,.row b,td:last-child{font-family:"Cormorant Garamond",serif}
+.ar{font-family:Amiri,serif;direction:rtl;unicode-bidi:isolate}
+a{color:inherit}
+img{display:block;width:100%;height:auto;object-fit:cover}
+.wrap{max-width:1180px;margin:auto}
+.band{padding:clamp(52px,7vw,100px) max(5vw,16px)}
+.mono{display:inline-block;background:var(--olive);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:14px;padding:10px max(4vw,16px)}
+nav .mono{width:34px;height:34px;flex:none}
+.links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1}
+.links a{flex:none;text-decoration:none;padding:10px 11px;border-radius:8px;font-size:15px;color:var(--soft)}
+.links a:hover{color:var(--olive);background:var(--paper)}
+.lang{flex:none;min-width:46px;height:42px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);font:600 15px "Cormorant Garamond",Amiri,serif;cursor:pointer;padding:0 12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--olive);background:var(--oliveBg);color:var(--onOlive);font:600 16px var(--body);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--olive)}
+.btn:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+nav .btn{flex:none;min-height:42px;padding:0 16px;font-size:15px}
+.hero{text-align:center;padding-bottom:0}
+.hero .mono{width:clamp(66px,8vw,96px);height:clamp(66px,8vw,96px)}
+.word{font:600 clamp(30px,4vw,44px)/1 "Cormorant Garamond",serif;color:var(--olive);letter-spacing:.16em;margin-top:10px}
+.tagline{font:italic 500 19px "Cormorant Garamond",serif;color:var(--gold);letter-spacing:.06em}
+.rule{width:180px;height:1px;background:var(--gold);margin:16px auto}
+.hero h1{font:700 clamp(32px,4.6vw,52px)/1.15 Amiri,serif;color:var(--ink)}
+html[lang=en] .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600}
+.hero p{max-width:640px;margin:12px auto 0;color:var(--soft);font-size:17px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:26px 0 40px}
+.arches{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:clamp(10px,2vw,24px);align-items:end;max-width:900px;margin:auto}
+.arch{border-radius:999px 999px 0 0;overflow:hidden;border:1px solid var(--gold);padding:6px;padding-bottom:0;background:var(--paper)}
+.arch img{border-radius:999px 999px 0 0;aspect-ratio:3/4}
+.arches .arch:nth-child(2) img{aspect-ratio:3/4.4}
+.promise{background:var(--oliveBg);color:var(--onOlive);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));text-align:center}
+.promise div{padding:22px 12px;border-inline-start:1px solid #ffffff22}.promise div:first-child{border:0}
+.promise b{display:block;font:600 21px "Cormorant Garamond",serif}.promise .ar{font-size:16px;opacity:.85}
+.head{text-align:center;margin-bottom:40px}
+.head h2{font-size:clamp(36px,4.6vw,52px);font-weight:600;color:var(--olive);letter-spacing:.01em}
+.head .ar{display:block;color:var(--gold);font-size:clamp(20px,2.4vw,26px);margin-top:4px}
+.head p{color:var(--soft);max-width:620px;margin:10px auto 0}
+.orn{display:block;width:120px;height:10px;margin:12px auto 0;background:linear-gradient(var(--gold),var(--gold)) center/100% 1px no-repeat}
+.orn::after{content:"";display:block;width:7px;height:7px;margin:auto;background:var(--gold);transform:translateY(1px) rotate(45deg)}
+.alt{background:var(--paper);border-block:1px solid var(--line)}
+.boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);display:flex;flex-direction:column;gap:8px;position:relative}
+.card h3{font-size:24px;font-weight:600;letter-spacing:.08em;color:var(--olive)}
+.card ul{margin:0;padding:0;list-style:none;color:var(--soft);font-size:15px}
+.card li::before{content:"◆";color:var(--gold);font-size:9px;margin-inline-end:8px;vertical-align:2px}
+.price{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.price b{font-size:32px;font-weight:600;color:var(--ink)}.price span{color:var(--soft);font-size:14px}
+.tag{position:absolute;top:-12px;inset-inline-end:16px;font-size:12px;color:var(--onOlive);background:var(--gold);border-radius:99px;padding:2px 12px}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px 48px}
+.list h3{font:600 26px "Cormorant Garamond",serif;color:var(--olive);margin:18px 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid var(--gold);padding-bottom:6px}
+.list h3 small{font:400 14px var(--body);color:var(--gold)}
+.list h3 .ar{font-size:19px;color:var(--gold);font-weight:400}
+.row{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+.row .n{flex:none}.row .n small{color:var(--soft);margin-inline-start:6px;font-size:13px}
+.row i{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.row b{font-size:21px;font-weight:600;white-space:nowrap}
+.builder{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+.pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.item{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--bg)}
+.item.on{border-color:var(--olive);box-shadow:inset 0 0 0 1px var(--olive)}
+.item div{flex:1;line-height:1.3}.item small{color:var(--soft);display:block;font-size:13px}
+.qty{display:flex;align-items:center;gap:2px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--olive);font-size:18px;cursor:pointer}
+.qty output{width:22px;text-align:center;font-weight:600}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+.sizes label{flex:1;min-width:110px;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;cursor:pointer;background:var(--bg);position:relative}
+.sizes input{position:absolute;opacity:0}.sizes label:has(input:checked){border-color:var(--olive);box-shadow:inset 0 0 0 1px var(--olive)}
+.sizes small{display:block;color:var(--soft)}
+.total{position:sticky;top:84px;background:var(--oliveBg);color:var(--onOlive);border-radius:18px;padding:26px;text-align:center}
+.total .big{font:600 clamp(52px,7vw,72px)/1 "Cormorant Garamond",serif;margin:8px 0}
+.total ul{list-style:none;padding:0;margin:14px 0;font-size:14px;opacity:.9;text-align:start}
+.total li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ffffff1f;padding:4px 0}
+.total .btn{background:var(--onOlive);color:#3b431f;border-color:var(--onOlive);width:100%}
+.note{font-size:13px;color:var(--soft);margin-top:12px}.total .note{color:#f5efdd;opacity:.75}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:16px}
+.ph{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ph img{aspect-ratio:4/3}.ph div{padding:12px 14px}.ph b{font:600 20px "Cormorant Garamond",serif;display:block;color:var(--olive)}
+.ph .ar{display:block;color:var(--gold);font-size:15px;margin-bottom:2px}
+.ph small{color:var(--soft);display:flex;justify-content:space-between;gap:8px}.ph small span{white-space:nowrap;color:var(--ink);font-weight:600}
+.soiree{display:flex;align-items:center;justify-content:center;gap:16px;margin:52px 0 22px;flex-wrap:wrap;text-align:center}
+.soiree h3{font:600 34px "Cormorant Garamond",serif;color:var(--olive)}.soiree .ar{font-size:22px;color:var(--gold)}
+.pill{border:1px solid var(--gold);border-radius:999px;padding:6px 18px;white-space:nowrap}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.frame{border:1px solid var(--gold);padding:8px;border-radius:18px;background:var(--paper)}.frame img{border-radius:12px;aspect-ratio:16/10}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}.chips span{border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:14px;background:var(--paper)}
+.step{font:600 22px "Cormorant Garamond",serif;color:var(--olive);margin:22px 0 0}
+.sub{font:600 28px "Cormorant Garamond",serif;color:var(--olive);margin-bottom:8px}
+table{width:100%;border-collapse:collapse}td,th{padding:9px 6px;border-bottom:1px solid var(--line);text-align:start}
+th{font-weight:500;color:var(--soft);font-size:14px}td:last-child,th:last-child{text-align:end;white-space:nowrap}td:last-child{font-size:20px;font-weight:600}
+.pk{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:20px}
+.pk .card{padding:0;overflow:hidden}.pk .card>img{aspect-ratio:16/10}.pk .in{padding:20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pk h3{letter-spacing:.02em;font-size:27px}.pk .ar{color:var(--gold);font-size:19px}
+html[lang=en] .ph .ar,html[lang=en] .pk .ar,html[lang=en] .policy .ar{text-align:left}
+.serves{color:var(--soft);font-size:14px}
+.gal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.gal .arch img{aspect-ratio:3/4}
+.policy{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.policy .card{background:var(--paper)}.policy .card h3{letter-spacing:.03em;font-size:26px}
+.order{background:var(--oliveBg);color:var(--onOlive)}
+.order .head h2,.order .head p{color:var(--onOlive)}.order .head .ar{color:#d9bd8a}
+form{max-width:760px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{display:flex;flex-direction:column;gap:6px;font-size:14px}
+form .full{grid-column:1/-1}
+input,select,textarea{font:16px var(--body);min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid #ffffff40;background:#ffffff12;color:var(--onOlive)}
+select option{color:#222}textarea{min-height:90px;resize:vertical}
+#lead{min-height:24px;color:#f1d9a6;font-size:14px}
+form .btn{background:var(--onOlive);color:#3b431f;border-color:var(--onOlive);min-height:54px;font-size:17px}
+.contact{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:34px;font-size:15px;opacity:.9}
+.num{font:600 19px "Cormorant Garamond",serif;direction:ltr;unicode-bidi:isolate}
+footer{text-align:center;padding:40px 16px;color:var(--soft);font-size:14px}footer .mono{width:44px;height:44px}
+footer .word{font-size:24px;margin:6px 0 2px}
+@media(max-width:860px){.builder,.split{grid-template-columns:1fr}.total{position:static}.gal{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.links{display:none}nav .wrap{justify-content:space-between}nav .home{flex:1}.promise b{font-size:17px}.promise .ar{display:none}form{grid-template-columns:1fr}.arches{gap:8px}.cta .btn{flex:1}.word{letter-spacing:.1em}}
+@media(prefers-reduced-motion:no-preference){.arch img{transition:transform .8s}.arch:hover img{transform:scale(1.05)}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="home" href="#top" aria-label="Zad Meals"><span class="mono"></span></a>
+<div class="links"><a href="#boxes" data-t="nBoxes"></a><a href="#build" data-t="nBuild"></a><a href="#finger" data-t="nFinger"></a><a href="#desserts" data-t="nDess"></a><a href="#cakes" data-t="nCakes"></a><a href="#packages" data-t="nPk"></a><a href="#order" data-t="nOrder"></a></div>
+<button class="lang" id="lang" type="button" aria-label="Language"></button>
+<a class="btn" href="https://wa.me/201037001293" target="_blank" rel="noopener" data-t="wa"></a>
+</div></nav>
+
+<header class="band hero" id="top"><div class="wrap">
+<span class="mono" role="img" aria-label="ZD"></span>
+<div class="word">ZAD MEALS</div>
+<div class="tagline">Exceptional Hospitality</div>
+<div class="rule"></div>
+<h1 data-t="h1"></h1>
+<p data-t="heroP"></p>
+<div class="cta"><a class="btn" href="#order" data-t="book"></a><a class="btn ghost" href="#boxes" data-t="seeMenu"></a></div>
+<div class="arches">
+<div class="arch"><img src="img/c2.jpg" alt="Celebration package"></div>
+<div class="arch"><img src="img/party.jpg" alt="Zad Meals grand party package"></div>
+<div class="arch"><img src="img/a3.jpg" alt="Wedding cake"></div>
+</div></div></header>
+
+<section class="promise"><div><b>100% Fresh Daily</b><span class="ar">طازج يومياً</span></div><div><b>Nothing Frozen</b><span class="ar">بدون أي مكونات مجمدة</span></div><div><b>Fresh Local Meat</b><span class="ar">لحوم محلية طازجة ١٠٠٪</span></div></section>
+
+<section class="band" id="boxes"><div class="wrap">
+<div class="head"><h2>Boxes Menu</h2><span class="ar">بوكسات الضيافة</span><span class="orn"></span><p data-t="boxesP"></p></div>
+<div class="boxes" id="boxList"></div>
+</div></section>
+
+<section class="band alt" id="build"><div class="wrap">
+<div class="head"><h2>Build Your Box</h2><span class="ar">صمّم بوكسك بنفسك</span><span class="orn"></span><p data-t="buildP"></p></div>
+<div class="builder">
+<div><div class="pick" id="pick"></div><div class="sizes" id="sizes"></div></div>
+<aside class="total"><div data-t="perBox"></div><div class="big"><span id="sum">0</span> <span style="font-size:.4em" data-t="egp"></span></div>
+<ul id="lines"></ul>
+<a class="btn" id="buildWa" href="#" target="_blank" rel="noopener" data-t="orderThis"></a>
+<div class="note" data-t="formula"></div></aside>
+</div></div></section>
+
+<section class="band" id="finger"><div class="wrap">
+<div class="head"><h2>Finger Food &amp; Kids</h2><span class="ar">فينجر فود ومنيو الأطفال</span><span class="orn"></span><p data-t="fingerP"></p></div>
+<div class="list" id="fingerList"></div>
+</div></section>
+
+<section class="band alt" id="desserts"><div class="wrap">
+<div class="head"><h2>Dessert Boxes</h2><span class="ar">بوكسات الحلويات</span><span class="orn"></span></div>
+<div class="photos" id="dessertList"></div>
+<div class="soiree"><h3>Gâteaux Soirée</h3><span class="ar">جاتوه سواريه</span><span class="pill"><span data-t="box30"></span> · <b class="num" style="font-size:22px">450</b> <span data-t="egp"></span></span></div>
+<div class="photos" id="soireeList"></div>
+</div></section>
+
+<section class="band" id="cakes"><div class="wrap">
+<div class="head"><h2>Customized Cakes</h2><span class="ar">كيك المناسبات</span><span class="orn"></span><p data-t="cakeP"></p></div>
+<div class="split">
+<div><div class="frame"><img src="img/cake.jpg" alt="Customized cake"></div><div id="cakeOpts"></div><p class="note" data-t="extra"></p></div>
+<div><h3 class="sub">Sizes &amp; Prices <span class="ar" style="color:var(--gold);font-size:20px;font-weight:400">· الأحجام والأسعار</span></h3>
+<table><thead><tr><th data-t="persons"></th><th data-t="priceEgp"></th></tr></thead><tbody id="sizeRows"></tbody></table></div>
+</div></div></section>
+
+<section class="band alt" id="packages"><div class="wrap">
+<div class="head"><h2>Celebration Packages</h2><span class="ar">باقات الاحتفالات</span><span class="orn"></span><p data-t="pkP"></p></div>
+<div class="pk" id="pkList"></div>
+</div></section>
+
+<section class="band" id="gallery"><div class="wrap">
+<div class="head"><h2>From Our Atelier</h2><span class="ar">من إبداعاتنا</span><span class="orn"></span><p data-t="galP"></p></div>
+<div class="gal"><div class="arch"><img src="img/a1.jpg" alt="Ruffle cake"></div><div class="arch"><img src="img/a2.jpg" alt="Bride cake"></div><div class="arch"><img src="img/a3.jpg" alt="Two-tier wedding cake"></div><div class="arch"><img src="img/a4.jpg" alt="Bride to be heart cake"></div><div class="arch"><img src="img/a5.jpg" alt="Chocolate drip cake"></div><div class="arch"><img src="img/a6.jpg" alt="Valentine cake"></div></div>
+</div></section>
+
+<section class="band alt" id="policy"><div class="wrap">
+<div class="head"><h2>Ordering &amp; Quality</h2><span class="ar">سياسة الطلب والجودة</span><span class="orn"></span><p data-t="polP"></p></div>
+<div class="policy">
+<div class="card"><h3>Advance Booking</h3><span class="ar" style="color:var(--gold)">مواعيد الحجز المسبق</span><div id="adv"></div></div>
+<div class="card"><h3>Payment</h3><span class="ar" style="color:var(--gold)">سياسة الدفع</span><div id="pay"></div></div>
+</div></div></section>
+
+<section class="band order" id="order"><div class="wrap">
+<div class="head"><h2>Book Your Occasion</h2><span class="ar">احجز مناسبتك</span><span class="orn"></span><p data-t="ordP"></p></div>
+<form id="f">
+<label><span data-t="fOcc"></span><select id="occ"></select></label>
+<label><span data-t="fDate"></span><input type="date" id="date" required></label>
+<label><span data-t="fCount"></span><input type="number" id="count" min="1" inputmode="numeric" required></label>
+<label><span data-t="fWhat"></span><select id="what"></select></label>
+<label class="full"><span data-t="fNotes"></span><textarea id="notes"></textarea></label>
+<div id="lead" class="full" aria-live="polite"></div>
+<button class="btn full" type="submit" data-t="send"></button>
+</form>
+<div class="contact"><span><span data-t="phone"></span> <span class="num">01037001293</span></span><a href="https://instagram.com/zadmeals" target="_blank" rel="noopener">Instagram · @zadmeals</a><span data-t="city"></span></div>
+</div></section>
+
+<footer><span class="mono"></span><div class="word">ZAD MEALS</div><div class="tagline">Exceptional Hospitality</div><div style="margin-top:8px" data-t="foot"></div></footer>
+
+<script>
+{
+const WA='https://wa.me/201037001293?text=';
+const $=s=>document.querySelector(s);
+let L=0;try{L=localStorage.getItem('zadLang')==='en'?1:0}catch(e){}
+const T={nBoxes:['البوكسات','Boxes'],nBuild:['صمّم بوكسك','Build a Box'],nFinger:['فينجر فود','Finger Food'],nDess:['الحلويات','Desserts'],nCakes:['الكيك','Cakes'],nPk:['الباقات','Packages'],nOrder:['الحجز','Book'],
+wa:['اطلب على واتساب','Order on WhatsApp'],h1:['ضيافة تليق بأجمل مناسباتك','Hospitality worthy of your finest moments'],
+heroP:['بوكسات ضيافة وحلويات وكيك مناسبات للأفراح والشركات والمدارس وأعياد الميلاد في القاهرة. كل طلب بيتحضّر طازة يوم التسليم.','Catering boxes, desserts and celebration cakes for weddings, companies, schools and birthdays in Cairo. Every order is prepared fresh on the day of delivery.'],
+book:['احجز مناسبتك','Book your occasion'],seeMenu:['شوف المنيو','View the menu'],
+boxesP:['بوكسات جاهزة للأفراح والشركات والمناسبات. البيتي بان بالحشوة اللي تختارها: بانيه، ستريبس، شاورما سوري أو كفتة.','Ready boxes for weddings, companies and events. Petit pain with the filling of your choice: paneh, strips, Syrian shawarma or kofta.'],
+buildP:['اختار الأصناف وحجم البوكس، والسعر بيتحسب قدامك على طول.','Pick your items and box size, and see the price instantly.'],perBox:['سعر البوكس الواحد','Price per box'],egp:['ج.م','EGP'],
+orderThis:['اطلب البوكس ده على واتساب','Order this box on WhatsApp'],formula:['سعر البوكس = مجموع الأصناف + سعر العلبة + ٢٥ ج','Box price = items + box + 25 EGP'],
+emptyBox:['ابدأ بإضافة الأصناف من القايمة','Start by adding items from the list'],prep:['تجهيز وتغليف','Preparation & packing'],
+fingerP:['صواني بتتحضّر طازة يوم مناسبتك، مثالية للتجمعات والمكاتب والاحتفالات.','Trays prepared fresh on the day of your event, ideal for gatherings, offices and celebrations.'],
+box30:['بوكس ٣٠ قطعة','Box of 30 pieces'],box6:['بوكس ٦','Box of 6'],box12:['بوكس ١٢','Box of 12'],
+cakeP:['صمّم كيكتك زي ما تحب، من ٥٧٠ ج.م.','Designed especially for your special moments, from 570 EGP.'],extra:['حشوات إضافية متاحة: نوتيلا، فستق، لوتس، كراميل، توت.','Extra fillings: Nutella, pistachio, Lotus, caramel, berries.'],
+persons:['عدد الأفراد','Persons'],priceEgp:['السعر (ج.م)','Price (EGP)'],pers:['فرد','persons'],
+pkP:['حلو وحادق في باقة واحدة، من ٨ أفراد لحد ٥٠.','Sweet and savoury in one package, for 8 up to 50 guests.'],serves:['تكفي','Serves'],guests:['فرد','guests'],
+galP:['أفراح، أعياد ميلاد، وكل لحظة بينهم. شاركنا فكرتك وثيم مناسبتك وإحنا نحوّلها لحقيقة.','Weddings, birthdays and every moment in between. Share your theme and we will bring it to life.'],
+polP:['كل الأصناف بتتحضّر طازة يوم التسليم، وبنضمن إن البوكس اللي يوصلك هو نفس اللي في الصور.','All items are freshly prepared on the day of delivery. We guarantee our boxes match our visuals.'],
+ordP:['املا التفاصيل وهتتبعت لنا رسالة جاهزة على واتساب، وهنرد عليك بالتأكيد والسعر النهائي.','Fill in the details and a ready message opens in WhatsApp. We will reply with confirmation and the final price.'],
+fOcc:['المناسبة','Occasion'],fDate:['تاريخ المناسبة','Event date'],fCount:['عدد البوكسات أو الضيوف','Number of boxes or guests'],fWhat:['اللي حابب تطلبه','What you would like'],fNotes:['ملاحظات (ثيم، ألوان، اسم على الكارت، المنطقة)','Notes (theme, colours, name on the card, area)'],
+send:['ابعت الطلب على واتساب','Send request on WhatsApp'],phone:['واتساب وتليفون:','WhatsApp & phone:'],city:['القاهرة، مصر','Cairo, Egypt'],
+foot:['Walid Abdel Fattah Food Services · جميع الأسعار بالجنيه المصري','Walid Abdel Fattah Food Services · All prices in EGP'],
+notSure:['لسه مش محدد','Not sure yet'],custom:['بوكس مخصص','Custom box'],perBoxS:['للبوكس','per box'],
+popular:['الأكثر طلباً','Most popular'],less:['أقل','Less'],more:['أكتر','More']};
+const t=k=>T[k][L];
+const G={g:['جاتوه','Gateau'],s:['سوفت درينك','Soft drink'],p:['ميني بيتزا','Mini pizza'],b:['باتون ساليه','Bâton salé'],pp1:['١ بيتي بان من اختيارك','1 petit pain of your choice'],pp2:['٢ بيتي بان من اختيارك','2 petit pain of your choice'],pp3:['٣ بيتي بان من اختيارك','3 petit pain of your choice']};
+const boxes=[['Mini Box',60,'g s'],['Light Box',65,'g p b'],['Party Box',75,'g p s'],['Basic Box',75,'pp1 g'],['Classic Box',95,'pp1 g s',1],['Special Box',120,'pp2 g s'],['Deluxe Box',135,'pp3 s b'],['Premium Box',150,'pp3 g s b']];
+const items=[[['كرواسون كبير','Large croissant'],['شيدر وتركي','Cheddar & turkey'],50],[['كرواسون وسط','Medium croissant'],['شيدر وتركي','Cheddar & turkey'],35],[['ميني كرواسون سادة','Mini croissant, plain'],0,10],[['ميني كرواسون جبنة','Mini croissant, cheese'],0,12],[['ميني بيتزا','Mini pizza'],0,10],[['بانيه','Chicken paneh'],['ساندوتش','Sandwich'],20],[['ستريبس','Chicken strips'],['ساندوتش','Sandwich'],25],[['شاورما سوري','Syrian shawarma'],['ساندوتش','Sandwich'],35],[['كفتة','Kofta'],['ساندوتش','Sandwich'],30],[['جاتوه','Gateau'],['حلويات','Dessert'],30],[['كب كيك عادي','Classic cupcake'],['حلويات','Dessert'],30],[['كب كيك كستمايز','Customized cupcake'],['حلويات','Dessert'],45],[['سوفت درينك','Soft drink'],['مشروبات','Drink'],15],[['عصير أطفال','Kids juice'],['مشروبات','Drink'],15],[['مياه','Water'],['مشروبات','Drink'],10]];
+const sizes=[[['بوكس صغير','Small box'],10],[['بوكس وسط','Medium box'],15],[['بوكس كبير','Large box'],20]];
+const q=items.map(()=>0);
+const finger=[['Petit Pain','بيتي بان',['٢٠ قطعة','20 pcs'],[[['بانيه','Paneh'],550],[['ستريبس','Chicken strips'],550],[['ناجتس','Chicken nuggets'],550],[['هوت دوج','Hot dog'],650],[['كفتة','Kofta'],750],[['تشيكن برجر','Chicken burger'],750],[['بيف برجر','Beef burger'],850]]],['Mahshy','محشي',['بالكيلو','per kilo'],[[['ورق عنب','Vine leaves'],275],[['كرنب','Cabbage'],275],[['محشي مشكّل','Mixed mahshy'],275]]],['Kibbeh','كبيبة',['٢٠ قطعة','20 pcs'],[[['كبيبة','Kibbeh'],750]]],['Kids Menu','منيو الأطفال',['مع بطاطس وعصير جهينة ميكس','with fries & Juhayna Mix juice'],[[['تشيكن برجر','Chicken burger'],110],[['تشيكن ناجتس','Chicken nuggets'],125],[['تشيكن ستريبس','Chicken strips'],130],[['بيف تشيز برجر','Beef cheeseburger'],135]]]];
+const des=[['d_cupcakes','Cupcakes','كب كيك',180,320],['d_custom','Customized Cupcakes','كب كيك كستمايز',240,440],['d_pops','Cake Pops','كيك بوبس',140,240],['d_cookies','Cookies','كوكيز',190,340],['d_donuts','Mini Donuts','ميني دونتس',155,265]];
+const so=[['g1','Fudge','فادج',''],['g2','Red Velvet','ريد فيلفيت',''],['g3','Cheesecake','تشيز كيك','Caramel · Raspberry · Blueberry'],['g4','Profiterole','بروفيترول','Nutella · Lotus'],['g5','Fruit Tart','تارت فواكه',''],['g6','Caramelized Walnut Tart','تارت عين الجمل بالكراميل','']];
+const opts=[['I · Choose your flavour','اختر نكهتك',[['شوكولاتة','Chocolate'],['فانيليا','Vanilla'],['ريد فيلفيت','Red velvet'],['لوتس','Lotus'],['فستق','Pistachio'],['فراولة','Strawberry']]],['II · Choose your filling','اختر الحشوة',[['شوكولاتة','Chocolate'],['نوتيلا','Nutella'],['لوتس','Lotus'],['كراميل','Caramel'],['فستق','Pistachio'],['توت','Berries']]],['III · Choose your decoration','اختر الديكور',[['مينيمال','Minimal'],['زهور','Floral'],['مودرن','Modern'],['لمسات ذهبية','Gold touch'],['ثيمات خاصة','Themed']]]];
+const cs=[['2 – 4',570],['4 – 6',630],['6 – 8',690],['8 – 10',800],['10 – 12',875],['12 – 15',1050],['15 – 18',1420],['18 – 20',1540],['20 – 25',1660],['25 – 30',1780]];
+const full=[['تورتة دورين كستمايز','2-tier customized cake'],['١٢ كب كيك كستمايز','12 customized cupcakes'],['١٢ كيك بوبس','12 cake pops'],['١٢ كوكيز بثيم','12 themed cookies'],['١٢ ميني دونتس','12 mini donuts']];
+const sav=[['١ كيلو ميني بيتزا خضار','1 kg vegetable mini pizza'],['١ كيلو ميني ساندوتشات باردة مشكلة','1 kg mixed cold mini sandwiches']];
+const pk=[['c1','30%','Celebration','باقة الاحتفال','8 – 10',960,[['تورتة دور واحد كستمايز','1-tier customized cake'],['٦ كب كيك كستمايز','6 customized cupcakes'],['٦ كيك بوبس','6 cake pops']]],['c2','30%','Grand Celebration','الاحتفال الكبير','15 – 20',2355,full],['c3','30%','Birthday Celebration','باقة عيد الميلاد','25 – 30',2980,full],['party','25%','Grand Party','الحفلة الكبرى','30 – 40',4100,[...full,...sav]],['party','92%','Mega Party','الحفلة الميجا','40 – 50',4500,[...full,...sav]]];
+const adv=[[['لحد ٥٠ بوكس','Up to 50 boxes'],['٥ أيام','5 days']],[['لحد ١٠٠ بوكس','Up to 100 boxes'],['١٠ أيام','10 days']],[['أكتر من ١٠٠ بوكس','Over 100 boxes'],['١٥ يوم','15 days']],[['أكتر من ٥٠٠ بوكس','Over 500 boxes'],['٣ أسابيع','3 weeks']]];
+const occs=[['فرح / خطوبة / كتب كتاب','Wedding / engagement'],['شركة / فعالية','Company / event'],['عيد ميلاد','Birthday'],['مدرسة / حضانة','School / nursery'],['مناسبة تانية','Other occasion']];
+const row=(n,p,s)=>`<div class="row"><span class="n">${n}${s?`<small>${s}</small>`:''}</span><i></i><b>${p}</b></div>`;
+const calc=()=>{const sz=sizes[+(document.querySelector('[name=sz]:checked')||{value:0}).value];let tt=0,ls=[];items.forEach((it,i)=>{if(q[i]){tt+=it[2]*q[i];ls.push([`${q[i]} × ${it[0][L]}`,it[2]*q[i]])}});
+const any=ls.length,total=any?tt+sz[1]+25:0;$('#sum').textContent=total;
+$('#lines').innerHTML=any?[...ls,[sz[0][L],sz[1]],[t('prep'),25]].map(l=>`<li><span>${l[0]}</span><span>${l[1]} ${t('egp')}</span></li>`).join(''):`<li><span>${t('emptyBox')}</span></li>`;
+const msg=L?(any?`Hello Zad Meals, I'd like a custom box:\n${ls.map(l=>'- '+l[0]).join('\n')}\n- ${sz[0][1]}\nEstimated price: ${total} EGP per box\nQuantity: `:'Hello Zad Meals, I would like to build a custom box'):(any?`أهلاً Zad Meals، عايز أطلب بوكس مخصص:\n${ls.map(l=>'- '+l[0]).join('\n')}\n- ${sz[0][0]}\nالسعر المتوقع: ${total} ج للبوكس\nالعدد: `:'أهلاً Zad Meals، عايز أصمم بوكس مخصص');
+$('#buildWa').href=WA+encodeURIComponent(msg)};
+const render=()=>{
+const h=document.documentElement;h.lang=L?'en':'ar';h.dir=L?'ltr':'rtl';
+document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));
+$('#lang').textContent=L?'ع':'EN';$('#count').placeholder=L?'e.g. 150':'مثلاً 150';
+$('#boxList').innerHTML=boxes.map(b=>`<div class="card">${b[3]?`<span class="tag">${t('popular')}</span>`:''}<h3>${b[0].toUpperCase()}</h3><ul>${b[2].split(' ').map(k=>`<li>${G[k][L]}</li>`).join('')}</ul><div class="price"><b>${b[1]}</b><span>${t('egp')} / ${t('perBoxS')}</span></div></div>`).join('');
+$('#pick').innerHTML=items.map((it,i)=>`<div class="item${q[i]?' on':''}" id="it${i}"><div>${it[0][L]}<small>${it[1]?it[1][L]+' · ':''}${it[2]} ${t('egp')}</small></div><div class="qty"><button type="button" data-i="${i}" data-d="-1" aria-label="${t('less')}">−</button><output id="q${i}">${q[i]}</output><button type="button" data-i="${i}" data-d="1" aria-label="${t('more')}">+</button></div></div>`).join('');
+const cur=(document.querySelector('[name=sz]:checked')||{value:'0'}).value;
+$('#sizes').innerHTML=sizes.map((s,i)=>`<label><input type="radio" name="sz" value="${i}" ${String(i)===cur?'checked':''}>${s[0][L]}<small>${s[1]} ${t('egp')}</small></label>`).join('');
+$('#fingerList').innerHTML=finger.map(g=>`<div><h3><span>${g[0]} <span class="ar">${g[1]}</span></span><small>${g[2][L]}</small></h3>${g[3].map(r=>row(r[0][L],r[1])).join('')}</div>`).join('');
+$('#dessertList').innerHTML=des.map(d=>`<div class="ph"><img src="img/${d[0]}.jpg" alt="${d[1]}"><div><b>${d[1]}</b><span class="ar">${d[2]}</span><small>${t('box6')} <span>${d[3]} ${t('egp')}</span></small><small>${t('box12')} <span>${d[4]} ${t('egp')}</span></small></div></div>`).join('');
+$('#soireeList').innerHTML=so.map(d=>`<div class="ph"><img src="img/${d[0]}.jpg" alt="${d[1]}"><div><b>${d[1]}</b><span class="ar">${d[2]}</span><small>${d[3]||'&nbsp;'}</small></div></div>`).join('');
+$('#cakeOpts').innerHTML=opts.map(o=>`<p class="step">${o[0]} <span class="ar" style="color:var(--gold);font-size:18px;font-weight:400">· ${o[1]}</span></p><div class="chips">${o[2].map(c=>`<span>${c[L]}</span>`).join('')}</div>`).join('');
+$('#sizeRows').innerHTML=cs.map(c=>`<tr><td><span class="num">${c[0]}</span> ${t('pers')}</td><td>${c[1]}</td></tr>`).join('');
+$('#pkList').innerHTML=pk.map(p=>`<div class="card"><img src="img/${p[0]}.jpg" alt="${p[2]}" style="object-position:center ${p[1]}"><div class="in"><h3>${p[2]}</h3><span class="ar">${p[3]}</span><span class="serves">${t('serves')} <span class="num" style="font-size:16px">${p[4]}</span> ${t('guests')}</span><ul>${p[6].map(i=>`<li>${i[L]}</li>`).join('')}</ul><div class="price"><b>${p[5]}</b><span>${t('egp')}</span></div></div></div>`).join('');
+$('#adv').innerHTML=adv.map(a=>row(a[0][L],a[1][L])).join('');
+$('#pay').innerHTML=row(L?'Deposit to confirm':'عربون لتأكيد الطلب','50%')+`<p class="note" style="margin:0">${L?'Via InstaPay or Vodafone Cash.':'عن طريق إنستاباي أو فودافون كاش.'}</p>`+row(L?'Balance on delivery':'الباقي عند الاستلام','50%')+`<p class="note" style="margin:0">${L?'Orders are confirmed once the deposit is received.':'الطلب بيتأكد بعد وصول العربون.'}</p>`;
+const ov=$('#occ').selectedIndex,wv=$('#what').selectedIndex;
+$('#occ').innerHTML=occs.map(o=>`<option>${o[L]}</option>`).join('');$('#occ').selectedIndex=Math.max(0,ov);
+$('#what').innerHTML=[t('notSure'),...boxes.map(b=>`${b[0]} (${b[1]} ${t('egp')})`),t('custom'),'Finger Food','Dessert Boxes','Gâteaux Soirée','Customized Cake',...pk.map(p=>p[2])].map(o=>`<option>${o}</option>`).join('');$('#what').selectedIndex=Math.max(0,wv);
+calc();lead()};
+$('#pick').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;q[i]=Math.max(0,Math.min(9,q[i]+ +b.dataset.d));$('#q'+i).textContent=q[i];$('#it'+i).classList.toggle('on',q[i]>0);calc()});
+$('#sizes').addEventListener('change',calc);
+$('#lang').addEventListener('click',()=>{L=1-L;try{localStorage.setItem('zadLang',L?'en':'ar')}catch(e){}render()});
+const need=n=>n>500?21:n>100?15:n>50?10:5;
+const d=$('#date'),c=$('#count');const td=new Date();td.setHours(0,0,0,0);d.min=new Date(td-td.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+function lead(){const n=+c.value,v=d.value;if(!n||!v){$('#lead').textContent='';return}const days=Math.round((new Date(v+'T00:00')-td)/864e5),r=need(n);
+$('#lead').textContent=days<r?(L?`Note: ${n} boxes need at least ${r} days' notice and there are only ${days} days left. Send us your request and we'll check availability.`:`تنبيه: ${n} بوكس محتاجين حجز قبلها بـ ${r} أيام على الأقل، وفاضل ${days} يوم بس. ابعت لنا وهنشوف المتاح.`):(L?`Great, the date works. ${n} boxes need ${r} days' notice.`:`تمام، الميعاد مناسب. ${n} بوكس محتاجين حجز قبلها بـ ${r} أيام.`)}
+d.addEventListener('input',lead);c.addEventListener('input',lead);
+$('#f').addEventListener('submit',e=>{e.preventDefault();const n=$('#notes').value;const msg=L?`Hello Zad Meals, I'd like to book:\nOccasion: ${$('#occ').value}\nDate: ${d.value}\nQuantity: ${c.value}\nOrder: ${$('#what').value}${n?'\nNotes: '+n:''}`:`أهلاً Zad Meals، حابب أحجز:\nالمناسبة: ${$('#occ').value}\nالتاريخ: ${d.value}\nالعدد: ${c.value}\nالطلب: ${$('#what').value}${n?'\nملاحظات: '+n:''}`;
+const a=document.createElement('a');a.href=WA+encodeURIComponent(msg);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()});
+render();
+}
+</script>
+</body>
+</html>
